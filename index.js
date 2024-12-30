@@ -16,6 +16,11 @@ app.get('/api/movies/:id', (req, res) => {
   let result = getMovieById(id);
   res.json(result);
 });
+app.get('/api/movie-details',(req,res)=>{
+  let id=parseInt(req.query.id);
+  let result = getMovieById(id);
+  res.json(result);
+})
 
 
 module.exports = app;
